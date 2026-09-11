@@ -1,9 +1,14 @@
 """
 아르바이트 중 반복적으로 수행하던 외식·프랜차이즈 업체의
-대표전화 번호 조사 작업을 반자동화하기 위해 작성한 코드입니다.
+대표전화 조사 작업을 반자동화하기 위해 당시 실제 사용했던 코드입니다.
 
-당시 실제 사용했던 코드 구조를 최대한 그대로 보존한 버전입니다.
-대상 웹사이트의 구조가 변경되었을 수 있으므로 현재 정상 동작은 보장하지 않습니다.
+이 파일은 과거 구현 경험을 기록하기 위한 참고용 코드입니다.
+
+당시에는 robots.txt 및 웹사이트의 자동수집 정책을 별도로 확인하지 못했습니다.
+현재 대상 사이트에는 무단 크롤링을 금지하는 안내가 명시되어 있으므로,
+본 코드를 해당 사이트에 다시 실행하는 것을 목적으로 하지 않습니다.
+
+웹사이트 구조 또한 변경되었을 수 있어 현재 정상 동작을 보장하지 않습니다.
 """
 
 from selenium import webdriver
@@ -14,7 +19,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # 메인 사이트 주소
-BASE_URL = "https://www.jumpoline.com"
+#BASE_URL = "https://www.jumpoline.com"
 
 def find_representative_numbers(keywords):
     options = webdriver.ChromeOptions()
